@@ -1,0 +1,26 @@
+{
+  "name": "crypto-wallet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfquesada/crypto-wallet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfquesada/crypto-wallet/issues"
+  },
+  "homepage": "https://github.com/mfquesada/crypto-wallet#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "web3": "^1.10.0"
+  }
+}

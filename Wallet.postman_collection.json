@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "0d9d246d-bcf3-4293-877d-507a6d3ab0dc",
+		"name": "Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/account/balance/USDT?address=",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/account/balance/USDT?address=0x309225a19b59E94a2192429774F7D3B6C6689eE6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"balance",
+						"USDT"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "0x309225a19b59E94a2192429774F7D3B6C6689eE6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/account/withdraw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"0xe6033cE5330bb35f600bE28f6CF7f454681425eE\",\r\n    \"privateKey\": \"0xd230138d82408fa34cebd9a9f5a63a0fddf8656580e4fc3d03e79ff8dcef88de\",\r\n    \"to\": \"0x309225a19b59E94a2192429774F7D3B6C6689eE6\",\r\n    \"symbol\": \"USDT\",\r\n    \"value\": \"5000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/account/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
