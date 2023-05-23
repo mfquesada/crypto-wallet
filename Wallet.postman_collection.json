@@ -41,7 +41,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/account/balance/USDT?address=0x309225a19b59E94a2192429774F7D3B6C6689eE6",
+					"raw": "http://localhost:8080/api/v1/account/balance/MTK?address=0x3EC67689aAd78202d1B2E7Ea4920e73B6b45EF53",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -52,12 +52,12 @@
 						"v1",
 						"account",
 						"balance",
-						"USDT"
+						"MTK"
 					],
 					"query": [
 						{
 							"key": "address",
-							"value": "0x309225a19b59E94a2192429774F7D3B6C6689eE6"
+							"value": "0x3EC67689aAd78202d1B2E7Ea4920e73B6b45EF53"
 						}
 					]
 				}
@@ -65,13 +65,13 @@
 			"response": []
 		},
 		{
-			"name": "/account/withdraw",
+			"name": "/account/transfer",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"from\": \"0xe6033cE5330bb35f600bE28f6CF7f454681425eE\",\r\n    \"privateKey\": \"0xd230138d82408fa34cebd9a9f5a63a0fddf8656580e4fc3d03e79ff8dcef88de\",\r\n    \"to\": \"0x309225a19b59E94a2192429774F7D3B6C6689eE6\",\r\n    \"symbol\": \"USDT\",\r\n    \"value\": \"5000\"\r\n}",
+					"raw": "{\r\n    \"symbol\": \"MTK\",\r\n    \"tokenType\": \"ERC721\",\r\n    \"from\": \"0x57ad869633D17F7a355C4B977CEe0448ade15824\",\r\n    \"privateKey\": \"0x29b72086bad428c672b14e2c0ee9869f6f45b35fe83c1ae45a05dc1ba7015d12\",\r\n    \"data\": {\r\n        \"from\": \"0x57ad869633D17F7a355C4B977CEe0448ade15824\",\r\n        \"to\": \"0x3EC67689aAd78202d1B2E7Ea4920e73B6b45EF53\",\r\n        \"tokenId\": \"2\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -79,7 +79,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/v1/account/withdraw",
+					"raw": "http://localhost:8080/api/v1/account/transfer",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -89,7 +89,38 @@
 						"api",
 						"v1",
 						"account",
-						"withdraw"
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/account/mint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"0x57ad869633D17F7a355C4B977CEe0448ade15824\",\r\n    \"privateKey\": \"0x29b72086bad428c672b14e2c0ee9869f6f45b35fe83c1ae45a05dc1ba7015d12\",\r\n    \"to\": \"0x57ad869633D17F7a355C4B977CEe0448ade15824\",\r\n    \"uri\": \"/02.json\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/account/mint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"mint"
 					]
 				}
 			},

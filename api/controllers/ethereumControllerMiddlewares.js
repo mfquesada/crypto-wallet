@@ -1,6 +1,6 @@
 const checkSymbol = async (req, res, next) => {
     try {
-        const symbols = ['ETH', 'USDT'];
+        const symbols = ['ETH', 'USDT', 'MTK'];
         if (symbols.includes(req.params.symbol)) {
             next();
         } else {
